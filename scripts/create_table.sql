@@ -1,3 +1,4 @@
+-- Active: 1766161583536@@127.0.0.1@5432@fintech_db
 
 drop TABLE IF EXISTS customers;
 CREATE TABLE customers (
@@ -44,4 +45,12 @@ CREATE TABLE loans (
     purpose VARCHAR(100),
     description TEXT,
     notes TEXT
+);
+
+
+DROP TABLE IF EXISTS loan_regions;
+CREATE TABLE loan_regions (
+    loan_id INT,
+    loan_amount INT,
+    region VARCHAR(50)
 );
