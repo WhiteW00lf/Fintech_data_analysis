@@ -46,7 +46,9 @@ SELECT
     c.zip_code,
     c.addr_state,
     c.avg_cur_bal,
-    c.tot_cur_bal
+    c.tot_cur_bal,
+    r.loan_amount AS region_loan_amount,
+    r.region AS loan_region
 FROM public.loans l
 INNER JOIN public.customers c
     ON l.customer_id = c.customer_id
